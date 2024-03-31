@@ -1,0 +1,10 @@
+data(ChickWeight)
+x<-ChickWeight
+mod<-lm(weight ~ Time + Diet ,data =ChickWeight)
+m<-lm(weight ~ Time ,data =ChickWeight)
+xyplot(weight ~ Time, groups = Diet, data = ChickWeight)
+library(lattice)
+n<-data.frame(Time = 10 , Diet = as.factor(1))
+pr<- predict(mod,n)
+predict
+error <- n$weight - pr
