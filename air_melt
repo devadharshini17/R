@@ -1,0 +1,7 @@
+
+data("airquality")
+x<-airquality
+summary(x)
+library(reshape2)
+m<-melt(x,id.vars=c("Month","Day"))
+c<- dcast(m,Month+Day~variable)
